@@ -7,9 +7,9 @@ public class ArrayMain {
 		numbers.inser(10);
 		numbers.inser(20);
 		numbers.inser(30);
+	 
 		numbers.inser(40);
-		numbers.inser(50);
-		numbers.inser(60);
+		numbers.removeAt(4);
 		numbers.print();
 	}
 }
