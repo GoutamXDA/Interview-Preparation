@@ -9,7 +9,10 @@ public class ArrayMain {
 		numbers.inser(30);
 	 
 		numbers.inser(40);
-		numbers.removeAt(4);
+		//numbers.removeAt(4);
+		System.out.println(numbers.indexOf(20));
+		System.out.println(numbers.indexOf(100));
+
 		numbers.print();
 	}
 }
