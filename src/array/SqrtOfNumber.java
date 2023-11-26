@@ -3,7 +3,7 @@ package array;
 public class SqrtOfNumber {
 
 	public static void main(String[] args) {
-		int number=8;
+		int number=5;
 		int result=getSquareRoot(number);
 		System.out.println(result);
 	}
@@ -13,14 +13,16 @@ public class SqrtOfNumber {
 		int start=0;
 		int end=number;
 		int result=0;
-		while(start<=end) {
+		
+		while (start<=end) {
 			int mid=start+(end-start)/2;
 			if (mid==number/mid) {
 				return mid;
-			}else if (mid<number/mid) {
+			}
+			else if (mid<number/mid) {
 				start=mid+1;
-				result= mid;
-			}else {
+				result=mid;
+			} else {
 				end=mid-1;
 			}
 		}
