@@ -8,15 +8,20 @@ public class Array {
 	public Array(int length) {
 		items = new int[length];
 	}
-
+// to add elements
+	
 	public void inser(int item) {
+		// check does an array is full
 		if (items.length == count) {
+			// when full double the size
 			int[] newItems = new int[count * 2];
 			for (int i = 0; i < count; i++)
+				// add the elements to newly double sized array
 				newItems[i] = items[i];
 			items = newItems;
 
 		}
+		//
 		items[count++] = item;
 
 	}
