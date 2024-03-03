@@ -3,7 +3,7 @@ package array;
 public class GuessNumberGame extends GuessGame {
 
 	public static int guessNumber(int n) {
-		int start = 1; // Adjusted starting point
+		int start = 1; 
 		int end = n;
 
 		while (start <= end) {
@@ -21,7 +21,7 @@ public class GuessNumberGame extends GuessGame {
 	}
 
 	public static void main(String[] args) {
-		int n = 100; // Example range of numbers to guess
+		int n = 100; 
 		int guessedNumber = guessNumber(n);
 
 		if (guessedNumber != -1) {

@@ -3,19 +3,17 @@ package array;
 public class ZeroMatrix {
 
 	public static void main(String[] args) {
-		int[][] matrix = { 
-							{ 1, 2, 3 }, 
-							{ 4, 0, 6 }, 
-							{ 7, 8, 9 } 
-							};
-
-		System.out.println("Original Matrix:");
-		printMatrix(matrix);
-
-		setZeros(matrix);
-
-		System.out.println("\nMatrix after setting zeroes:");
-		printMatrix(matrix);
+		int[][] matirx= {
+				{1,2,3},
+				{0,3,2},
+				{1,2,3}
+		};
+		
+		System.out.println("Before setZeros:");
+		printMatrix(matirx);
+		System.out.println("After setZeros:");
+		setZeros(matirx);
+		printMatrix(matirx);
 	}
 
 	public static void setZeros(int[][] matrix) {
@@ -33,31 +31,31 @@ public class ZeroMatrix {
 
 		for (int i = 0; i < row.length; i++) {
 			if (row[i])
-				nullifyRow(matrix, i);
+				rowSetZeros(matrix, i);
 		}
-
 		for (int i = 0; i < column.length; i++) {
 			if (column[i])
-				nullifyColumn(matrix, i);
+				columnSetZeros(matrix, i);
 		}
 	}
 
-	private static void nullifyColumn(int[][] matrix, int col) {
-		for (int i = 0; i < matrix.length; i++) {
-			matrix[i][col] = 0;
+	private static void columnSetZeros(int[][] matrix, int col) {
+
+		for (int j = 0; j < matrix.length; j++) {
+			matrix[j][col] = 0;
 		}
 	}
 
-	private static void nullifyRow(int[][] matrix, int row) {
+	private static void rowSetZeros(int[][] matrix, int row) {
+
 		for (int j = 0; j < matrix[0].length; j++) {
 			matrix[row][j] = 0;
 		}
 	}
-
 	public static void printMatrix(int[][] matrix) {
 		for (int[] row : matrix) {
 			for (int cell : row) {
-				System.out.print(cell + " ");
+				System.out.print(cell+"");
 			}
 			System.out.println();
 		}
