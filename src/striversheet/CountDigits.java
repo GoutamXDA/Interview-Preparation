@@ -11,7 +11,7 @@ public class CountDigits {
 	}
 
 	public static int countDigits(int n) {
-		int count=0;
+		/*int count=0;
 		int original=n;
 		while(0<n) {
 			int digit=n%10;
@@ -19,6 +19,13 @@ public class CountDigits {
 				count++;
 			}
 			n/=10;
+		}
+		return count;
+		*/
+		int count=0;
+		while(n!=0) {
+			n=n/10;
+			count++;
 		}
 		return count;
 	}
