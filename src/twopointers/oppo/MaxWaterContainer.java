@@ -1,4 +1,4 @@
-package twopointers;
+package twopointers.oppo;
 
 public class MaxWaterContainer {
     public static void main(String[] args) {
